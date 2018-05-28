@@ -17,7 +17,7 @@
         <mysql.version>5.1.40</mysql.version>
         <slf4j.version>1.7.5</slf4j.version>
         <jackson.version>2.4.2</jackson.version>
-        <jackson.core.version>2.2.1</jackson.core.version>
+        <!--<jackson.core.version>2.2.1</jackson.core.version>-->
         <codehaus.version>1.8.8</codehaus.version>
         <druid.version>1.0.9</druid.version>
         <httpclient.version>4.3.5</httpclient.version>
@@ -56,7 +56,7 @@
                 <version>${commons-lang3.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.commons</groupId>
+                <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
@@ -71,6 +71,34 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-jaxb-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-core-asl</artifactId>
+                <version>${codehaus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-mapper-asl</artifactId>
+                <version>${codehaus.version}</version>
+            </dependency>
+
             <!-- httpclient -->
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
@@ -303,41 +331,6 @@
                 <artifactId>aspectjweaver</artifactId>
                 <version>${aspectj.version}</version>
             </dependency>
-
-            <!--Jackson-->
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>${jackson.core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson.core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson.core.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.module</groupId>
-                <artifactId>jackson-module-jaxb-annotations</artifactId>
-                <version>${jackson.core.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.codehaus.jackson</groupId>
-                <artifactId>jackson-core-asl</artifactId>
-                <version>${codehaus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.codehaus.jackson</groupId>
-                <artifactId>jackson-mapper-asl</artifactId>
-                <version>${codehaus.version}</version>
-            </dependency>
-
 
             <!--log-->
             <dependency>
